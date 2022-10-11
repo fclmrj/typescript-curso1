@@ -4,17 +4,10 @@ export class Negociacao {
         this._quantidade = _quantidade;
         this._valor = _valor;
     }
-    set data(data) { }
     get data() {
-        return this._data;
+        return new Date(this._data.getMilliseconds());
     }
     ;
-    get quantidade() {
-        return this._quantidade;
-    }
-    get valor() {
-        return this._valor;
-    }
     get volume() {
         return this._quantidade * this._valor;
     }
